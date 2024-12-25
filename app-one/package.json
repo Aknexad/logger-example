@@ -1,0 +1,27 @@
+{
+  "name": "app-one",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "start": "npm run build && node --env-file=.env dist/run.js ",
+    "dev": "ts-node-dev --poll --env-file=.env  src/server.ts",
+    "build": "rm -rf ./dist && npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@opensearch-project/opensearch": "^2.13.0",
+    "express": "^4.21.2",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
+}
